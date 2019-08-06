@@ -1,0 +1,49 @@
+.profile-enter {
+  opacity: 0.01;
+  transform: scale(1.1);
+}
+
+.profile-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: all 300ms;
+}
+
+.profile-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.profile-exit-active {
+  opacity: 0.01;
+  transform: scale(1.1);
+  transition: all 300ms;
+}
+
+.search-enter {
+  //opacity: 0.01;
+  //transform: scale(1.1);
+  height: 0px;
+  overflow: hidden;
+}
+
+.search-enter-active {
+  // opacity: 1;
+  // transform: scale(1);
+  // transition: all 300ms;
+  height: 500px;
+  transition: height 0.3s ease;
+}
+
+.search-exit {
+  // opacity: 1;
+  // transform: scale(1);
+  height: 0px;
+}
+
+.search-exit-active {
+  // opacity: 0.01;
+  // transform: scale(1.1);
+  // transition: all 300ms;
+  height: 0px;
+}
