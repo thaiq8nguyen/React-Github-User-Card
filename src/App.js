@@ -17,16 +17,16 @@ export default class App extends Component {
     };
   }
 
-  // async componentDidMount() {
-  //   const userProfile = await axios.get(
-  //     `https://api.github.com/users/${this.state.defaultUser}`
-  //   );
-  //   const userFollowers = await axios.get(
-  //     `https://api.github.com/users/${this.state.defaultUser}/followers`
-  //   );
+  async componentDidMount() {
+    const userProfile = await axios.get(
+      `https://api.github.com/users/${this.state.defaultUser}`
+    );
+    const userFollowers = await axios.get(
+      `https://api.github.com/users/${this.state.defaultUser}/followers`
+    );
 
-  //   this.setState({ user: userProfile.data, followers: userFollowers.data });
-  // }
+    this.setState({ user: userProfile.data, followers: userFollowers.data });
+  }
 
   handleSearchDisplay = () => {
     console.log("search");
