@@ -5,7 +5,14 @@ export default class Navbar extends Component {
     super();
     this.state = { mobileMenu: false };
   }
-
+  toggleHomeDisplay = () => {
+    this.setState({ mobileMenu: false });
+    this.props.toggleHomeDisplay();
+  };
+  toggleSearchDisplay = () => {
+    this.setState({ mobileMenu: false });
+    this.props.toggleSearchDisplay();
+  };
   toggleMobileMenu = () => {
     this.setState(prevState => ({ mobileMenu: !prevState.mobileMenu }));
   };
@@ -15,7 +22,7 @@ export default class Navbar extends Component {
         <div className="navbar-brand">
           <p className="navbar-item">GitHub Profile Card</p>
           <a
-            href="#"
+            href="#/"
             className="navbar-burger burger"
             role="button"
             aria-label="menu"
@@ -34,9 +41,16 @@ export default class Navbar extends Component {
         >
           <div className="navbar-start">
             <a
-              href="#"
+              href="#/"
               className="navbar-item"
-              onClick={this.props.toggleSearchDisplay}
+              onClick={this.toggleHomeDisplay}
+            >
+              Home
+            </a>
+            <a
+              href="#/"
+              className="navbar-item"
+              onClick={this.toggleSearchDisplay}
             >
               Search User Profile
             </a>

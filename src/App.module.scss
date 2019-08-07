@@ -19,31 +19,34 @@
   transform: scale(1.1);
   transition: all 300ms;
 }
-
+.searchContainer {
+}
 .search-enter {
-  //opacity: 0.01;
-  //transform: scale(1.1);
-  height: 0px;
-  overflow: hidden;
+  // opacity: 0.01;
+  // transform: scale(1.1);
+  //height: 0px;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.3s ease-in;
 }
 
 .search-enter-active {
   // opacity: 1;
   // transform: scale(1);
   // transition: all 300ms;
-  height: 500px;
-  transition: height 0.3s ease;
+  transform: scaleY(1);
 }
 
 .search-exit {
   // opacity: 1;
   // transform: scale(1);
-  height: 0px;
+  transform: scaleY(1);
 }
 
 .search-exit-active {
   // opacity: 0.01;
   // transform: scale(1.1);
   // transition: all 300ms;
-  height: 0px;
+  transform: scaleY(0);
+  transition: transform 0.3s ease-out;
 }
